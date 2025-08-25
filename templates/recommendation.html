@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Recommendation Result</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #f4f4f4; }
+        .container { max-width: 600px; margin: 0 auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h1 { color: #2e7d32; text-align: center; }
+        .recommendation-item { margin-bottom: 15px; padding: 10px; background: #e8f5e9; border-radius: 4px; }
+        .recommendation-item strong { color: #1b5e20; }
+        a { display: inline-block; margin-top: 20px; color: #2e7d32; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Your Gym Recommendation</h1>
+        <div class="recommendation-item">
+            <strong>Exercises:</strong> {{ result.Exercises }}
+        </div>
+        <div class="recommendation-item">
+            <strong>Equipment:</strong> {{ result.Equipment }}
+        </div>
+        <div class="recommendation-item">
+            <strong>Diet:</strong> {{ result.Diet }}
+        </div>
+        <div class="recommendation-item">
+            <strong>Recommendation:</strong> {{ result.Recommendation }}
+        </div>
+        <a href="{{ url_for('index') }}">Back to Form</a>
+    </div>
+</body>
+</html>
+              
